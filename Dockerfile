@@ -5,6 +5,9 @@ MAINTAINER Yasutaka Kawamoto
 # update
 RUN apt-get update
 
+# for slack notification
+RUN apt-get -y install curl
+
 # Install for running 32-bit applications
 # 64-bit distribution capable of running 32-bit applications
 # https://developer.android.com/studio/index.html
