@@ -30,4 +30,5 @@ ENV PATH $ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
 
 # Update of Android SDK
 RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.1" \
-  && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" 
+  && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
+  && echo y | android update sdk --no-ui --all --filter "sys-img-arm64-v8a-android-24"
