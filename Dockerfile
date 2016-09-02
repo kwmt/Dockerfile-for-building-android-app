@@ -27,9 +27,9 @@ RUN apt-get -y install wget \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH $ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
-ENV ANDROID_EMULATOR_FORCE_32BIT true
+#ENV ANDROID_EMULATOR_FORCE_32BIT true
 
 # Update of Android SDK
-RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.1" \
+RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2" \
   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24"
