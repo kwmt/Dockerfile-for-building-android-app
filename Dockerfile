@@ -35,4 +35,4 @@ RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-2
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24"
 
 # For DeployGate
-RUN apt-get -y install ruby
+RUN apt-get -y install ruby ruby-dev
