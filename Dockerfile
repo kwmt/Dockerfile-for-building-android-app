@@ -33,3 +33,6 @@ ENV PATH $ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
 RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2" \
   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24"
+
+# For DeployGate
+RUN apt-get -y install ruby
