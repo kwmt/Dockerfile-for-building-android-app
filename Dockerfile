@@ -16,14 +16,12 @@ RUN apt-get -y install lib32stdc++6 lib32z1
 # Install Java8
 RUN apt-get install -y openjdk-8-jdk
 
-ENV ANDROID_SDK_TOOL_REVISION 25.2.2
-
 # Download Android SDK
 RUN apt-get -y install wget \
   && cd /usr/local \
-  && wget http://dl.google.com/android/android-sdk_r$ANDROID_SDK_TOOL_REVISION-linux.tgz \
-  && tar zxvf android-sdk_r$ANDROID_SDK_TOOL_REVISION-linux.tgz \
-  && rm -rf /usr/local/android-sdk_r$ANDROID_SDK_TOOL_REVISION-linux.tgz
+  && wget http://dl.google.com/android/android-sdk_r25.2.2-linux.tgz \
+  && tar zxvf android-sdk_r25.2.2-linux.tgz \
+  && rm -rf /usr/local/android-sdk_r25.2.2-linux.tgz
 
 # Environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
