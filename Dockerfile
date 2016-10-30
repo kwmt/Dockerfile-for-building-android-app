@@ -19,9 +19,9 @@ RUN apt-get install -y openjdk-8-jdk
 # Download Android SDK
 RUN apt-get -y install wget \
   && cd /usr/local \
-  && wget http://dl.google.com/android/android-sdk_r25.2.2-linux.tgz \
-  && tar zxvf android-sdk_r25.2.2-linux.tgz \
-  && rm -rf /usr/local/android-sdk_r25.2.2-linux.tgz
+  && wget http://dl.google.com/android/android-sdk_r25.2.1-linux.tgz \
+  && tar zxvf android-sdk_r25.2.1-linux.tgz \
+  && rm -rf /usr/local/android-sdk_r25.2.1-linux.tgz
 
 # Environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
