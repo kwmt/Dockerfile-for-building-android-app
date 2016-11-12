@@ -21,7 +21,7 @@ RUN apt-get install -y openjdk-8-jdk
 
 RUN mkdir -p /user/local/android-sdk-linux
 
-RUN cd /user/local/android-sdk-linux && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
+RUN cd /user/local/android-sdk-linux && apt-get -y install wget && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
   unzip tools_r25.2.2-linux.zip
 
 # # Download Android SDK
