@@ -38,8 +38,6 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 #ENV ANDROID_EMULATOR_FORCE_32BIT true
 
 
-RUN sudo ls -lah /user/local/android-sdk-linux/tools
-
 # Update of Android SDK
 # RUN echo y | android update sdk --no-ui --all --filter "android-25,build-tools-25.0.0" \
 #   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
