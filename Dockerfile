@@ -47,8 +47,8 @@ RUN echo y | android update sdk --no-ui --all --filter "android-25,build-tools-2
 #     echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-24.0.1,android-24,addon-google_apis-google-24,extra-android-support,extra-android-m2repository,extra-google-m2repository,sys-img-armeabi-v7a-android-24
 
 
-RUN which adb
-RUN which android
+# RUN which adb
+# RUN which android
 
 
 # Create emulator
