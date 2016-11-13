@@ -39,7 +39,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 
 # Update of Android SDK
-RUN echo y | android update sdk --no-ui --all --filter "android-25,build-tools-25.0.0" \
+RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2" \
   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24"
 
@@ -56,7 +56,7 @@ RUN echo "no" | android create avd \
                 --force \
                 --device "Nexus 5" \
                 --name test \
-                --target android-25 \
+                --target android-24 \
                 --abi armeabi-v7a \
                 --skin WVGA800 \
                 --sdcard 512M
