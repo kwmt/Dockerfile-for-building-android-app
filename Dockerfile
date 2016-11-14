@@ -44,7 +44,7 @@ RUN cd /usr/local/android-sdk-linux && rm -r tools && wget --output-document=too
 
 # Environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
-ENV ANDROID_HOME /user/local/android-sdk-linux
+ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 #ENV ANDROID_EMULATOR_FORCE_32BIT true
 
