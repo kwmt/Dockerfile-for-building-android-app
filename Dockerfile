@@ -19,9 +19,18 @@ RUN apt-get -y install build-essential ruby ruby-dev
 # Install Java8
 RUN apt-get install -y openjdk-8-jdk
 
-RUN mkdir -p /user/local/android-sdk-linux
+# RUN mkdir -p /user/local/android-sdk-linux
 
-RUN cd /user/local/android-sdk-linux && apt-get -y install wget && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
+
+
+# Download Android SDK
+RUN apt-get -y install wget \
+  && cd /usr/local \
+  && wget http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz \
+  && tar zxvf android-sdk_r24.4.1-linux.tgz \
+  && rm -rf /usr/local/android-sdk_r24.4.1-linux.tgz
+
+RUN cd /user/local/android-sdk-linux && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
   unzip tools_r25.2.2-linux.zip
 
 # # Download Android SDK
