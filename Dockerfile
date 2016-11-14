@@ -30,7 +30,9 @@ RUN apt-get -y install wget \
   && tar zxvf android-sdk_r24.4.1-linux.tgz \
   && rm -rf /usr/local/android-sdk_r24.4.1-linux.tgz
 
-RUN cd /user/local/android-sdk-linux && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
+RUN ls /usr/local
+
+RUN cd /usr/local/android-sdk-linux && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
   unzip tools_r25.2.2-linux.zip
 
 # # Download Android SDK
