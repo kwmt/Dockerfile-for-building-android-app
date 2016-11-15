@@ -53,7 +53,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2,android-25,build-tools-25.0.0" \
   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24" \
-  && echo y | android update sdk --no-ui 
+  && echo y | android update sdk --no-ui  --all --filter "platform-tools,tools"
 # android update sdk --no-ui  でplatform-toolsが現れる
 
 # RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools && \
