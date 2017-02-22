@@ -59,6 +59,11 @@ RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-2
 # RUN echo y | android update sdk --all --no-ui --filter platform-tools,tools && \
 #     echo y | android update sdk --all --no-ui --filter platform-tools,tools,build-tools-24.0.1,android-24,addon-google_apis-google-24,extra-android-support,extra-android-m2repository,extra-google-m2repository,sys-img-armeabi-v7a-android-24
 
+# Fix build error
+# > You have not accepted the license agreements of the following SDK components
+# http://stackoverflow.com/a/38381577
+mkdir "$ANDROID_SDK/licenses" || true
+echo -e "\n8933bad161af4178b1185d1a37fbf41ea5269c55" > "$ANDROID_SDK/licenses/android-sdk-license"
 
 # RUN which adb
 # RUN which android
