@@ -32,11 +32,8 @@ RUN apt-get -y install wget \
 
 RUN ls /usr/local
 
-RUN cd /usr/local/android-sdk-linux && rm -r tools && wget --output-document=tools_r25.2.2-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.2-linux.zip && \
-  unzip tools_r25.2.2-linux.zip
-
-RUN cd /usr/local/android-sdk-linux && rm -r tools && wget --output-document=build-tools_r26-linux.zip --quiet https://dl.google.com/android/repository/build-tools_r26-linux.zip && \
-  unzip build-tools_r26-linux.zip
+RUN cd /usr/local/android-sdk-linux && rm -r tools && wget --output-document=tools_r25.2.5-linux.zip --quiet https://dl.google.com/android/repository/tools_r25.2.5-linux.zip && \
+  unzip tools_r25.2.5-linux.zip
 
 # # Download Android SDK
 # RUN apt-get -y install wget \
@@ -53,7 +50,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 
 # Update of Android SDK
-RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2,android-25,build-tools-25.0.0,build-tools-25.0.2,android-26,build-tools-26.0.0" \
+RUN echo y | android update sdk --no-ui --all --filter "android-24,build-tools-24.0.2,android-25,build-tools-25.0.0,build-tools-25.0.2,build-tools-25.0.3" \
   && echo y | android update sdk --no-ui --all --filter "extra-android-support,extra-google-m2repository,extra-android-m2repository,extra-google-google_play_services" \
   && echo y | android update sdk -a -u -t "sys-img-armeabi-v7a-android-24" \
   && echo y | android update sdk --no-ui  --all --filter "platform-tools"
